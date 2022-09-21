@@ -21,6 +21,59 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #7158e3;
   }
+}
+
+.crypto{
+  justify-content: center;
+  display: flex;
+  margin-top: 5%;
+}
+
+.position{
+  border: 2px solid black;
+  width: 1350px;
+  display: flex;
+}
+
+.cardCryptos{
+  height: 600px;
+  width: 100%;
+ display: flex;
+}
+.bubbleBox{
+max-width: 1500px;
+margin: 0;
+height: 120%;
+width: 100%;
+position: absolute;
+}
+.bubble{
+  top: -6%;
+  width: 800px;
+  height: 700px;
+  background-color: rgba(255, 255, 255, .04);
+  border-radius: 50%;
+  position: absolute;
+}
+.bubble2{
+  top: 6%;
+  left: 40%;
+  width: 800px;
+  height: 700px;
+  background-color: rgba(255, 255, 255, .04);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.bitcoinCardImage{
+ height: 100%;
+  width: 100%;
+  border: 2px solid blue;
+}
+.bitcoinCard{
+  height: 100%;
+  width: 100%;
+  border: 2px solid red;
 }
