@@ -77,3 +77,20 @@ position: absolute;
   width: 100%;
   border: 2px solid red;
 }
+.headerTittle{
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  font-size: 30px;
+  border: 2px solid green;
+  height: 27%;
+}
+.headerGraph{
+  height: 73%;
+  
+  border: 2px solid yellow;
+}
+.tittle{
+  padding-top: 30px;
+  
+}
