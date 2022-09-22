@@ -59,7 +59,7 @@ const Cryptos = () => {
         }
     }, [dataCrypto]);
 
-    console.log(...label.slice(0, 14))
+  
 
     const data = {
 
@@ -101,6 +101,7 @@ const Cryptos = () => {
         ]
     };
 
+    console.log(...label.slice(0, 7))
 
 
     if (typeof dataCrypto !== 'undefined')
@@ -140,7 +141,7 @@ const Cryptos = () => {
                     </div>
                 </div>
                 <div className='bannerArtFooter'>
-                <Image layout="responsive"src={bannerFooterImg}></Image>
+               
                 </div>
               
     

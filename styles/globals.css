@@ -136,20 +136,47 @@ position: absolute;
  
 }
 .bannerArtFooter{
-  width: 100vw;
- margin-top: -14%;
- 
+  width: 100%;
+  margin-top: -300px;
+height: 400px;
+
+background-image: url(../img/banner-curve-dark.png);
+background-size: 100% 100%;
 }
 
 .allCrypto{
- 
+  border: 2px solid yellow;
   width: 100%;
-  height: 800px;
+
 
 }
 .allCryptoHolder{
-
+  
   background-color: #2a3543;
   display: flex;
   justify-content: center;
+}
+
+.boxMap{
+  margin-bottom: 2%;
+  width: 100%;
+  height: 160px;
+  border: 2PX SOLID black;
+  display: flex;
+}
+.imageMap{
+  align-self: center;
+  margin-left: 2%;
+}
+
+.mapBoxTittle{
+  align-self: center;
+  margin-left: 5%;
+  font-size: 30px;
+}
+.mapGraph{
+  border: 2px solid red;
+  width: 30%;
+  height: 100%;
+  margin-left: 13%;
 }
