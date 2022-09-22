@@ -99,8 +99,9 @@ const Allcrypto = () => {
                                     <Image loader={() => iconUrl} width={100} height={100} src={iconUrl}></Image>
                                 </div>
                                 <p className='mapBoxTittle'>{name}</p>
-                                <p className='mapBoxPrice'><span className='spanTittleMap'>{price}</span></p>
+                                <p className='mapBoxPrice'><span className='spanTittleMap'>{Number(price).toFixed(2) + ' $'}</span></p>
                                 <p className='mapBoxChange'>{change}</p>
+                                {console.log(price)}
                                 <div className = 'mapGraph'><Line data={
                                     {
 
