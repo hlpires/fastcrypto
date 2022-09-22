@@ -99,9 +99,49 @@ const Allcrypto = () => {
                                     <Image loader={() => iconUrl} width={100} height={100} src={iconUrl}></Image>
                                 </div>
                                 <p className='mapBoxTittle'>{name}</p>
-                                <p className='mapBoxTittle'>{price}</p>
-                                <p className='mapBoxTittle'>{change}</p>
-                                <div className = 'mapGraph'><Line data={data} width = {'250%'} height={'100%'} /></div>
+                                <p className='mapBoxPrice'><span className='spanTittleMap'>{price}</span></p>
+                                <p className='mapBoxChange'>{change}</p>
+                                <div className = 'mapGraph'><Line data={
+                                    {
+
+                                        labels: ['', '', '', '', '', ''],
+                                        datasets: [
+                                            {
+                                                plugins: {
+                                                    legend: {
+                                                        display: 'false'
+                                                    }
+                                                },
+                                                label: '',
+                                                data: [...sparkline.slice(0, 7)],
+                                                elements: {
+                                                    line: {
+                                                        tension: 0,
+                                                        fill: 'start',
+                                                        borderWidth: 2,
+                                                        color: 'black',
+                                                        borderColor: 'rgba(47,197,268,1)',
+                                                        backgroundColor: 'rgba(47,297,68,0.3)'
+                                                    },
+                                                    point: {
+                                
+                                                        radius: 0,
+                                                        girRadius: 0,
+                                                    }
+                                                },
+                                                responsive: true,
+                                                scales: {
+                                                    xAxis: {
+                                                        display: false
+                                                    },
+                                                    yAxis: {
+                                                        display: false
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                } width = {'250%'} height={'100%'} /></div>
                                 
 
                         </div>))} 
