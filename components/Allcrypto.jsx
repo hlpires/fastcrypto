@@ -57,7 +57,7 @@ const Allcrypto = () => {
 
     const filter = (v) =>{
         if(v)
-        setCoinsF(coins.filter(({ name }) => name.startsWith(v)))
+        setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)))
         else
         setCoinsF(coins)
         
@@ -73,7 +73,7 @@ const Allcrypto = () => {
                    
                     <div className='allCrypto' id = 'crypto'>
                     <div className = 'filterBox'>
-                       <div className = 'buscar' onClick = {() =>filter(document.getElementById('1').value)}>buscar</div> <input id = '1' placeholder = '' className=  'input' ></input>
+                       <div className = 'buscar' onClick = {() =>filter(document.getElementById('1').value.toLowerCase())}>buscar</div> <input onChange = {() =>filter(document.getElementById('1').value)} id = '1' placeholder = '' className=  'input' ></input>
                     </div>
                         <div className = 'tittleHolder'>
                             <div className = 'holder1'><p className ='tittleText'>Nome</p></div>
