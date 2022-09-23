@@ -49,7 +49,12 @@ const Allcrypto = () => {
         color:color
     }
 
+    const filter = (v) =>{
+        console.log(v)
 
+    }
+ 
+    console.log(dataCrypto)
 
     
     if (typeof coins !== 'undefined')
@@ -57,7 +62,11 @@ const Allcrypto = () => {
         return (
             <div className='allCryptoHolder'>
                 <div className='position'>
+                   
                     <div className='allCrypto' id = 'crypto'>
+                    <div className = 'filterBox'>
+                       <div className = 'buscar' onClick = {() =>filter(document.getElementById('1').value)}>buscar</div> <input id = '1' placeholder = '' className=  'input' ></input>
+                    </div>
                         <div className = 'tittleHolder'>
                             <div className = 'holder1'><p className ='tittleText'>Nome</p></div>
                             <div className = 'holder2'><p className ='tittleText'>Preço / Variação em 24hrs</p></div>

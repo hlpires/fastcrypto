@@ -15,11 +15,18 @@ const Cryptos = () => {
     const [label, setlabel] = useState([])
     const [bitcoinChange, setBitCoinChange] = useState()
     const [color, setColor] = useState()
+    const [animate, setAnimate] = useState()
+    const [animateShadow,setAnimateShadow] = useState()
+
     const myStyle = {
         color: 'red',
         fontSize: '20px',
         marginLeft: '0%',
+    }
 
+    const bitcoinArtStyle = {
+        transform: animate,
+        filter:animateShadow
 
     }
 
@@ -51,6 +58,7 @@ const Cryptos = () => {
     }, []);
 
     useEffect(() => {
+        
         if (dataCrypto) {
             setBitCoinNome(dataCrypto.data.coins[0].name)
             setBitCoinPrice(Math.trunc(Number(dataCrypto.data.coins[0].price)))
@@ -59,7 +67,26 @@ const Cryptos = () => {
         }
     }, [dataCrypto]);
 
-  
+
+useEffect(() => {
+
+    const interval = setInterval(() => {
+        if (animate === 'translate3d(0px, 0px, 0px)') {
+            setAnimate('translate3d(0px, 16px, 0px)')
+            setAnimateShadow('drop-shadow(6px 4px 5px rgb(15, 15, 15))')
+            
+
+        } else {
+            setAnimate('translate3d(0px, 0px, 0px)')
+            setAnimateShadow('drop-shadow(2px 4px 10px rgb(109, 188, 188))')
+        }
+    }, 1700)
+
+    return () => clearInterval(interval)
+
+}, [animate]);
+
+
 
     const data = {
 
@@ -101,7 +128,7 @@ const Cryptos = () => {
         ]
     };
 
-    console.log(...label.slice(0, 7))
+  
 
 
     if (typeof dataCrypto !== 'undefined')
@@ -134,17 +161,17 @@ const Cryptos = () => {
                                     </div>
                                 </div>
                                 <div className='bitcoinCardImage'>
-                                    <div className='bitcoinArt'><Image height={520} width={480} src={imageCrypto}></Image></div>
+                                    <div className='bitcoinArt' style={bitcoinArtStyle} onClick={() => { change() }}><Image height={560} width={520} src={imageCrypto}></Image></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='bannerArtFooter'>
-               
+
                 </div>
-              
-    
+
+
             </div>
 
         )
