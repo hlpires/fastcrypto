@@ -9,6 +9,7 @@ const Allcrypto = () => {
     const axios = require("axios");
     const [dataCrypto, setDataCrypto] = useState()
     const [coins, setCoins] = useState()
+    const [color,setColor] = useState()
 
 
     useEffect(() => {
@@ -43,65 +44,35 @@ const Allcrypto = () => {
    setCoins(dataCrypto.data.coins)
     }, [dataCrypto]);
 
-    const data = {
-
-        labels: ['', '', '', '', '', ''],
-        datasets: [
-            {
-                plugins: {
-                    legend: {
-                        display: 'false'
-                    }
-                },
-                label: '',
-                data: [...label.slice(0, 7)],
-                elements: {
-                    line: {
-                        tension: 0,
-                        fill: 'start',
-                        borderWidth: 2,
-                        color: 'black',
-                        borderColor: 'rgba(47,197,268,1)',
-                        backgroundColor: 'rgba(47,297,68,0.3)'
-                    },
-                    point: {
-
-                        radius: 0,
-                        girRadius: 0,
-                    }
-                },
-                responsive: true,
-                scales: {
-                    xAxis: {
-                        display: false
-                    },
-                    yAxis: {
-                        display: false
-                    }
-                }
-            }
-        ]
-    };
+    
+    const mystyle = {
+        color:color
+    }
 
 
 
-    console.log(coins)
+    
     if (typeof coins !== 'undefined')
     
         return (
             <div className='allCryptoHolder'>
                 <div className='position'>
-                    <div className='allCrypto'>
-                        
+                    <div className='allCrypto' id = 'crypto'>
+                        <div className = 'tittleHolder'>
+                            <div className = 'holder1'><p className ='tittleText'>Nome</p></div>
+                            <div className = 'holder2'><p className ='tittleText'>Preço / Variação em 24hrs</p></div>
+                            <div className = 'holder3'><p className ='tittleText'>Grafico</p></div>                         
+                        </div>
                         {coins.map(({ iconUrl, name, change, price,sparkline}) => (
+                            
                             <div className='boxMap'>
-                                <div className='imageMap'>
+                                <div className='imageMap' >
                                     <Image loader={() => iconUrl} width={100} height={100} src={iconUrl}></Image>
                                 </div>
                                 <p className='mapBoxTittle'>{name}</p>
-                                <p className='mapBoxPrice'><span className='spanTittleMap'>{Number(price).toFixed(2) + ' $'}</span></p>
-                                <p className='mapBoxChange'>{change}</p>
-                                {console.log(price)}
+                                <p className='mapBoxPrice'>{Number(price).toFixed(2) + ' $'}</p>
+                                <p className='mapBoxChange'><span style = {mystyle} className='spanTittleMap'>{change + '%'}</span></p>
+                               
                                 <div className = 'mapGraph'><Line data={
                                     {
 
@@ -122,7 +93,7 @@ const Allcrypto = () => {
                                                         borderWidth: 2,
                                                         color: 'black',
                                                         borderColor: 'rgba(47,197,268,1)',
-                                                        backgroundColor: 'rgba(47,297,68,0.3)'
+                                                        backgroundColor: 'rgba(147,297,368,0.3)'
                                                     },
                                                     point: {
                                 

@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -145,23 +146,27 @@ background-size: 100% 100%;
 }
 
 .allCrypto{
-  border: 2px solid yellow;
-  width: 100%;
 
+  width: 100%;
+  background-color: #2a3543;
+ 
 
 }
 .allCryptoHolder{
-  
+ 
   background-color: #2a3543;
   display: flex;
   justify-content: center;
 }
 
 .boxMap{
+  background-color: rgb(47, 47, 48);
   margin-bottom: 2%;
+  margin-left: 0%;
   width: 100%;
   height: 160px;
-  border: 2PX SOLID black;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border: 1px solid rgb(73, 73, 73);
   display: flex;
 }
 .imageMap{
@@ -182,26 +187,102 @@ background-size: 100% 100%;
 .mapBoxPrice{
   align-self: center;
   height: 20%;
-  width: 10%;
-  margin-left: 10%;
-  font-size: 25px;
-  text-align: left;
+  width: 15%;
+  margin-left: 5%;
+  font-size: 30px;
+  text-align: right;
   
 }
 .mapBoxChange{
   align-self: center;
-  margin-left: 1%;
+  margin-left: 0.5%;
   width: 10%;
-  padding-top: 10px;
-  font-size: 20px;
+  padding-top: 17px;
+  font-size: 16px;
 }
 .mapGraph{
-  border: 2px solid red;
+ 
   width: 30%;
   height: 100%;
   margin-left: 16%;
 }
-.spanTittleMap{
- color: rgb(24, 216, 24);
+.tittleHolder{
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+}
+.holder1{
  
+  width: 32%;
+  height: 100%;
+}
+.holder2{
+
+  width: 38%;
+   height: 100%;
+}
+.holder3{
+  
+  width: 30%;
+  height: 100%;
+}
+.tittleText{
+padding-top: 5px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+color:rgb(184, 184, 184);
+}
+.header{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+.headerBox{
+  width: 100%;
+  margin-top:2%;
+  height: 80%;
+
+  display: flex;
+ 
+}
+.logo{
+  margin-left: 2%;
+  width: 6%;
+  float: left;
+  height: 80%;
+  background-image: url(../img/logo.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+.logoTittle{
+  width: 20%;
+  height: 100%;
+
+  margin-left: 0%;
+}
+.logoTittleText{
+
+margin-top: 7%;
+font-size: 35px;
+font-weight: bolder;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.button{
+  
+  width: 15%;
+  margin-top: 0.5%;
+  border-radius: 65px;
+  margin-left: 45%;
+  height: 65%;
+  text-align: center;
+  background-color: rgb(252, 252, 252);
+  cursor: pointer;
+}
+.logoButtonText{
+  color: black;
+  margin-top: 7%;
+  font-size: 28px;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
