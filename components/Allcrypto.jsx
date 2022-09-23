@@ -10,6 +10,7 @@ const Allcrypto = () => {
     const [dataCrypto, setDataCrypto] = useState()
     const [coins, setCoins] = useState()
     const [color,setColor] = useState()
+    const [coinsF,setCoinsF] = useState(coins)
 
 
     useEffect(() => {
@@ -49,15 +50,22 @@ const Allcrypto = () => {
         color:color
     }
 
-    const filter = (v) =>{
-        console.log(v)
+    useEffect(() => {
+      if(typeof coins !== 'undefined')
+        setCoinsF(coins.splice(0,15))
+    }, [coins]);
 
+    const filter = (v) =>{
+        if(v)
+        setCoinsF(coins.filter(({ name }) => name.startsWith(v)))
+        else
+        setCoinsF(coins)
+        
     }
- 
-    console.log(dataCrypto)
+ console.log(coins)
 
     
-    if (typeof coins !== 'undefined')
+    if (typeof coins !== 'undefined' && typeof coinsF !== 'undefined')
     
         return (
             <div className='allCryptoHolder'>
@@ -72,7 +80,7 @@ const Allcrypto = () => {
                             <div className = 'holder2'><p className ='tittleText'>Preço / Variação em 24hrs</p></div>
                             <div className = 'holder3'><p className ='tittleText'>Grafico</p></div>                         
                         </div>
-                        {coins.map(({ iconUrl, name, change, price,sparkline}) => (
+                        {coinsF.map(({ iconUrl, name, change, price,sparkline}) => (
                             
                             <div className='boxMap'>
                                 <div className='imageMap' >
