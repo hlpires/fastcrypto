@@ -81,7 +81,8 @@ position: absolute;
 
 .bitcoinCardImage{
  height: 100%;
-  width:80%;
+  width:60%;
+ 
 
 }
 .bitcoinCard{
@@ -201,7 +202,7 @@ background-size: 100% 100%;
   margin-bottom: 2%;
   margin-left: 0%;
   width: 100%;
-  height: 160px;
+  height: 180px;
  
   
   border: 1px solid rgb(73, 73, 73);
@@ -263,6 +264,7 @@ background-size: 100% 100%;
   width: 38%;
    height: 100%;
 }
+
 .holder3{
   
   width: 30%;
