@@ -10,13 +10,10 @@ const header = () => {
                 <div className='headerBox'>
 
                     <div className='logoTittle'>
-                        <p className ='logoTittleText'>Fast Crypto</p>
+                        <p className ='logoTittleText'>FAST CRYPTO</p>
 
                     </div>
-                    <div className='button'>
-                    <a href="#crypto"><p className ='logoButtonText'>Ver Mais</p></a>
-
-                    </div>
+            
 
                 </div>
 

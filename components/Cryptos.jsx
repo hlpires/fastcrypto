@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import imageCrypto from '../img/crypto.png'
 import Image from 'next/image'
 import { Line } from 'react-chartjs-2';
+import banner from '../img/banner.png'
 import Chart from 'chart.js/auto';
 import bannerFooterImg from '../img/banner-curve-dark.png'
 
@@ -141,7 +142,24 @@ useEffect(() => {
                                 <div className='bubble'></div>
                                 <div className='bubble2'></div>
                             </div>
-                            <div className='cardCryptos'>
+                          <div className ='banner'>
+                              <div className = 'contentBox'>
+                              <div className = 'tittleBox'><p className = 'tittleTextBanner'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p></div>
+                              <div className = 'subTittle'><p className = 'subTittletextBanner'>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry</p></div>
+                              </div>
+                              <div className = 'imageBanner'>
+                                  <div className = 'imageBannerSize'><Image src = {banner} width={500} height={500}></Image></div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='bannerArtFooter'>
+
+                </div>
+                <div className ='bitcoinBox'>
+                <div className ='position'>
+                <div className='cardCryptos'>
                                 <div className='bitcoinCard'>
                                     <div className='headerTittle'>
                                         <div className='bitcoinImage'><Image loader={() => dataCrypto.data.coins[0].iconUrl} width={100} height={100} src={dataCrypto.data.coins[0].iconUrl}></Image></div>
@@ -156,7 +174,7 @@ useEffect(() => {
                                         <Line
                                             data={data}
                                             width={400}
-                                            height={220}
+                                            height={170}
                                         />
                                     </div>
                                 </div>
@@ -164,14 +182,8 @@ useEffect(() => {
                                     <div className='bitcoinArt' style={bitcoinArtStyle} onClick={() => { change() }}><Image height={560} width={520} src={imageCrypto}></Image></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='bannerArtFooter'>
-
-                </div>
-
-
+                         </div>
+                         </div>
             </div>
 
         )

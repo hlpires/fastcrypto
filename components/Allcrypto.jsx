@@ -9,8 +9,8 @@ const Allcrypto = () => {
     const axios = require("axios");
     const [dataCrypto, setDataCrypto] = useState()
     const [coins, setCoins] = useState()
-    const [color,setColor] = useState()
-    const [coinsF,setCoinsF] = useState(coins)
+    const [color, setColor] = useState()
+    const [coinsF, setCoinsF] = useState(coins)
 
 
     useEffect(() => {
@@ -41,56 +41,56 @@ const Allcrypto = () => {
     }, []);
 
     useEffect(() => {
-        if(dataCrypto)
-   setCoins(dataCrypto.data.coins)
+        if (dataCrypto)
+            setCoins(dataCrypto.data.coins)
     }, [dataCrypto]);
 
-    
+
     const mystyle = {
-        color:color
+        color: color
     }
 
     useEffect(() => {
-      if(typeof coins !== 'undefined')
-        setCoinsF(coins.splice(0,15))
+        if (typeof coins !== 'undefined')
+            setCoinsF(coins.splice(0, 10))
     }, [coins]);
 
-    const filter = (v) =>{
-        if(v)
-        setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)))
+    const filter = (v) => {
+        if (v)
+            setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)))
         else
-        setCoinsF(coins)
-        
-    }
- console.log(coins)
+            setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)).splice(0, 10))
 
-    
+    }
+    console.log(coins)
+
+
     if (typeof coins !== 'undefined' && typeof coinsF !== 'undefined')
-    
+
         return (
             <div className='allCryptoHolder'>
                 <div className='position'>
-                   
-                    <div className='allCrypto' id = 'crypto'>
-                    <div className = 'filterBox'>
-                       <div className = 'buscar' onClick = {() =>filter(document.getElementById('1').value.toLowerCase())}>buscar</div> <input onChange = {() =>filter(document.getElementById('1').value)} id = '1' placeholder = '' className=  'input' ></input>
-                    </div>
-                        <div className = 'tittleHolder'>
-                            <div className = 'holder1'><p className ='tittleText'>Nome</p></div>
-                            <div className = 'holder2'><p className ='tittleText'>Preço / Variação em 24hrs</p></div>
-                            <div className = 'holder3'><p className ='tittleText'>Grafico</p></div>                         
+
+                    <div className='allCrypto' id='crypto'>
+                        <div className='filterBox'>
+                            <div className='buscar' onClick={() => filter(document.getElementById('1').value.toLowerCase())}></div> <input onChange={() => filter(document.getElementById('1').value)} id='1' placeholder=' Pesquise por Cryptos' className='input' ></input>
                         </div>
-                        {coinsF.map(({ iconUrl, name, change, price,sparkline}) => (
-                            
+                        <div className='tittleHolder'>
+                            <div className='holder1'><p className='tittleText'>Nome</p></div>
+                            <div className='holder2'><p className='tittleText'>Preço / Variação em 24hrs</p></div>
+                            <div className='holder3'><p className='tittleText'>Grafico</p></div>
+                        </div>
+                        {coinsF.map(({ iconUrl, name, change, price, sparkline }) => (
+
                             <div className='boxMap'>
                                 <div className='imageMap' >
                                     <Image loader={() => iconUrl} width={100} height={100} src={iconUrl}></Image>
                                 </div>
                                 <p className='mapBoxTittle'>{name}</p>
                                 <p className='mapBoxPrice'>{Number(price).toFixed(2) + ' $'}</p>
-                                <p className='mapBoxChange'><span style = {mystyle} className='spanTittleMap'>{change + '%'}</span></p>
-                               
-                                <div className = 'mapGraph'><Line data={
+                                <p className='mapBoxChange'><span style={mystyle} className='spanTittleMap'>{change + '%'}</span></p>
+
+                                <div className='mapGraph'><Line data={
                                     {
 
                                         labels: ['', '', '', '', '', ''],
@@ -113,7 +113,7 @@ const Allcrypto = () => {
                                                         backgroundColor: 'rgba(147,297,368,0.3)'
                                                     },
                                                     point: {
-                                
+
                                                         radius: 0,
                                                         girRadius: 0,
                                                     }
@@ -130,10 +130,10 @@ const Allcrypto = () => {
                                             }
                                         ]
                                     }
-                                } width = {'250%'} height={'100%'} /></div>
-                                
+                                } width={400} height={130} /></div>
 
-                        </div>))} 
+
+                            </div>))}
 
                     </div>
 
