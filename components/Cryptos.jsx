@@ -107,12 +107,12 @@ useEffect(() => {
                         fill: 'start',
                         borderWidth: 2,
                         color: 'black',
-                        borderColor: 'rgba(47,197,268,1)',
-                        backgroundColor: 'rgba(47,297,68,0.3)'
+                        borderColor: 'rgba(58, 226, 51)',
+                        backgroundColor: 'rgba(28, 166, 91)'
                     },
                     point: {
-
-                        radius: 0,
+                        color:'black',
+                        radius: 7,
                         girRadius: 0,
                     }
                 },
@@ -144,11 +144,11 @@ useEffect(() => {
                             </div>
                           <div className ='banner'>
                               <div className = 'contentBox'>
-                              <div className = 'tittleBox'><p className = 'tittleTextBanner'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p></div>
-                              <div className = 'subTittle'><p className = 'subTittletextBanner'>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry</p></div>
+                              <div className = 'tittleBox'><p className = 'tittleTextBanner'>Acompanhe agora os valores das Cryptomoedas</p></div>
+                              <div className = 'subTittle'><p className = 'subTittletextBanner'>Graficos em tempo real para a analise de dados de investidores</p></div>
                               </div>
                               <div className = 'imageBanner'>
-                                  <div className = 'imageBannerSize'><Image src = {banner} width={500} height={500}></Image></div>
+                                  <div className = 'imageBannerSize'><Image src = {banner} width={600} height={500}></Image></div>
                               </div>
                           </div>
                         </div>
@@ -179,7 +179,7 @@ useEffect(() => {
                                     </div>
                                 </div>
                                 <div className='bitcoinCardImage'>
-                                    <div className='bitcoinArt' style={bitcoinArtStyle} onClick={() => { change() }}><Image height={560} width={520} src={imageCrypto}></Image></div>
+                                    <div className='bitcoinArt' style={bitcoinArtStyle} ><Image height={560} width={620} src={imageCrypto}></Image></div>
                                 </div>
                             </div>
                          </div>

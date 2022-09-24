@@ -82,7 +82,7 @@ const Allcrypto = () => {
                         </div>
                         {coinsF.map(({ iconUrl, name, change, price, sparkline }) => (
 
-                            <div className='boxMap'>
+                            <div className='boxMap'key = '1'>
                                 <div className='imageMap' >
                                     <Image loader={() => iconUrl} width={100} height={100} src={iconUrl}></Image>
                                 </div>
@@ -109,8 +109,8 @@ const Allcrypto = () => {
                                                         fill: 'start',
                                                         borderWidth: 2,
                                                         color: 'black',
-                                                        borderColor: 'rgba(47,197,268,1)',
-                                                        backgroundColor: 'rgba(147,297,368,0.3)'
+                                                        borderColor: 'rgba(58, 226, 51)',
+                                                        backgroundColor: 'rgba(28, 166, 91)'
                                                     },
                                                     point: {
 
