@@ -11,6 +11,7 @@ const Allcrypto = () => {
     const [coins, setCoins] = useState()
     const [color, setColor] = useState()
     const [coinsF, setCoinsF] = useState(coins)
+    const [display, setDisplay] = useState()
 
 
     useEffect(() => {
@@ -50,6 +51,10 @@ const Allcrypto = () => {
         color: color
     }
 
+    const stylebutton = {
+        display:display
+    }
+
     useEffect(() => {
         if (typeof coins !== 'undefined')
             setCoinsF(coins.splice(0, 10))
@@ -62,7 +67,11 @@ const Allcrypto = () => {
             setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)).splice(0, 10))
 
     }
-    console.log(coins)
+const loadmore  = () =>{
+    setCoinsF(coins.splice(0, 40))
+    setDisplay('none')
+}
+
 
 
     if (typeof coins !== 'undefined' && typeof coinsF !== 'undefined')
@@ -93,7 +102,7 @@ const Allcrypto = () => {
                                 <div className='mapGraph'><Line data={
                                     {
 
-                                        labels: ['', '', '', '', '', ''],
+                                        labels: ['-24', '-22', '-20', '-18', '-15', '-10', '-5', '-1', 'agora'],
                                         datasets: [
                                             {
                                                 plugins: {
@@ -101,8 +110,8 @@ const Allcrypto = () => {
                                                         display: 'false'
                                                     }
                                                 },
-                                                label: '',
-                                                data: [...sparkline.slice(0, 7)],
+                                                label:'24HRSs',
+                                                data: [...sparkline.slice(0, 1),...sparkline.slice(1, 10),...sparkline.slice(1, 15),...sparkline.slice(1, 25)],
                                                 elements: {
                                                     line: {
                                                         tension: 0,
@@ -130,12 +139,19 @@ const Allcrypto = () => {
                                             }
                                         ]
                                     }
-                                } width={400} height={130} /></div>
+                                } width={400} height={140} /></div>
 
 
                             </div>))}
+                            
+                    <div className =  'addMore'>
+                        <div style ={stylebutton} className = 'addMoreButton' onClick = { () => loadmore()}>
+                            <p className ='buttonText'> Carragar Todas</p>
+                        </div>
+                    </div>
 
                     </div>
+
 
                 </div>
             </div>
