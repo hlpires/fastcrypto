@@ -445,7 +445,9 @@ align-self: center;
 
 @media (max-width: 665px){
 
-
+  body {
+    color: white !important;
+  }
 
   .tittleHolder{
     display: none;
@@ -463,14 +465,37 @@ display: none;
 
 
    }
+   .bubbleBox{
+     display: none;
+   }
+
+   .logoTittle{
+     width: 90%;
+     margin-left: 5%;
+   }
+   .contentBox{
+width: 90%;
+margin-left: 5%;
+   }
+   .imageBanner{
+     display: none;
+   }
+   .buscar{
+     display: none;
+   }
    .filterBox{
-    width: 100%;
- 
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
  
   }
+  .bannerArtFooter{
+  display: none;
+    margin-top: -500px;
 
+  }
   .cardCryptos{
-    
+    display: none;
   }
  .headerTittle{
    
