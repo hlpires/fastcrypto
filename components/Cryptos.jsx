@@ -91,7 +91,7 @@ useEffect(() => {
 
     const data = {
 
-        labels: ['', '', '', '', '', ''],
+        labels: ['-24', '-22', '-20', '-18', '-16', '-12', '-10', '-8', '-4', '-2', 'agora'],
         datasets: [
             {
                 plugins: {
@@ -100,7 +100,7 @@ useEffect(() => {
                     }
                 },
                 label: '',
-                data: [...label.slice(0, 7)],
+                data: [...label.slice(0, 1),...label.slice(1, 10),...label.slice(1, 15),...label.slice(1, 25),bitcoinPrice],
                 elements: {
                     line: {
                         tension: 0,

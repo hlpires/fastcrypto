@@ -42,6 +42,7 @@ const Allcrypto = () => {
     }, []);
 
     useEffect(() => {
+        
         if (dataCrypto)
             setCoins(dataCrypto.data.coins)
     }, [dataCrypto]);
@@ -57,22 +58,17 @@ const Allcrypto = () => {
 
     useEffect(() => {
         if (typeof coins !== 'undefined')
-            setCoinsF(coins.splice(0, 10))
+            setCoinsF(coins)
     }, [coins]);
 
     const filter = (v) => {
         if (v)
-            setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)))
+            setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)).splice(0, 10))
         else
             setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)).splice(0, 10))
 
     }
-const loadmore  = () =>{
-    setCoinsF(coins.splice(0, 40))
-    setDisplay('none')
-}
-
-
+ console.log(coins)
 
     if (typeof coins !== 'undefined' && typeof coinsF !== 'undefined')
 
@@ -82,7 +78,7 @@ const loadmore  = () =>{
 
                     <div className='allCrypto' id='crypto'>
                         <div className='filterBox'>
-                            <div className='buscar' onClick={() => filter(document.getElementById('1').value.toLowerCase())}></div> <input onChange={() => filter(document.getElementById('1').value)} id='1' placeholder=' Pesquise por Cryptos' className='input' ></input>
+                            <div className='buscar'></div> <input onChange={() => filter(document.getElementById('1').value)} id='1' placeholder=' Pesquise por Cryptos' className='input' ></input>
                         </div>
                         <div className='tittleHolder'>
                             <div className='holder1'><p className='tittleText'>Nome</p></div>
@@ -91,7 +87,7 @@ const loadmore  = () =>{
                         </div>
                         {coinsF.map(({ iconUrl, name, change, price, sparkline }) => (
 
-                            <div className='boxMap'key = '1'>
+                            <div className='boxMap'key = {price}>
                                 <div className='imageMap' >
                                     <Image loader={() => iconUrl} width={100} height={100} src={iconUrl}></Image>
                                 </div>
@@ -102,7 +98,7 @@ const loadmore  = () =>{
                                 <div className='mapGraph'><Line data={
                                     {
 
-                                        labels: ['-24', '-22', '-20', '-18', '-15', '-10', '-5', '-1', 'agora'],
+                                        labels: ['-24', '-22', '-20', '-18', '-16', '-12', '-10', '-8', '-4', '-2', 'agora'],
                                         datasets: [
                                             {
                                                 plugins: {
@@ -111,7 +107,7 @@ const loadmore  = () =>{
                                                     }
                                                 },
                                                 label:'24HRSs',
-                                                data: [...sparkline.slice(0, 1),...sparkline.slice(1, 10),...sparkline.slice(1, 15),...sparkline.slice(1, 25)],
+                                                data: [...sparkline.slice(0, 1),...sparkline.slice(1, 10),...sparkline.slice(1, 15),...sparkline.slice(1, 25),price],
                                                 elements: {
                                                     line: {
                                                         tension: 0,
@@ -145,9 +141,9 @@ const loadmore  = () =>{
                             </div>))}
                             
                     <div className =  'addMore'>
-                        <div style ={stylebutton} className = 'addMoreButton' onClick = { () => loadmore()}>
-                            <p className ='buttonText'> Carragar Todas</p>
-                        </div>
+                       {/* } <div style ={stylebutton} className = 'addMoreButton' onClick = { () => loadmore()}>
+                            <p className ='buttonText'> Carregar todas</p>
+                            </div> */}
                     </div>
 
                     </div>
