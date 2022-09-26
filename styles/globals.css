@@ -44,7 +44,8 @@ a {
 }
 
 .cardCryptos{
-  height: 600px;
+
+
   width: 100%;
   background-color: #202020;
  display: flex;
@@ -57,14 +58,15 @@ max-width: 1500px;
 margin: 0;
 max-height: 640px;
 height: 65%;
+width: 90%;
 
-width: 100%;
+
 position: absolute;
 }
 .bubble{
   top: -6%;
-  width: 800px;
-  height: 700px;
+  width: 50%;
+  height: 94%;
   background-color: rgba(255, 255, 255, .04);
   border-radius: 50%;
   position: absolute;
@@ -72,8 +74,8 @@ position: absolute;
 .bubble2{
   top: 6%;
   left: 40%;
-  width: 700px;
-  height: 600px;
+  width: 50%;
+  height: 94%;
   background-color: rgba(255, 255, 255, .04);
   border-radius: 50%;
   position: absolute;
@@ -93,20 +95,19 @@ position: absolute;
 .headerTittle{
 
   width: 80%;
-  margin-left:10%;
+  
   text-align: center;
   font-size: 30px;
  display: flex;
   height: 23%;
- color: black;
+ color: white;
 }
 .headerGraph{
   padding-top: 8%;
   padding-left: 2%;
-  height: 70%;
+  
  width: 93%;
- min-width: 600px;
-
+ position: relative;
  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
  border-radius: 5px;
  padding-right: 7%;
@@ -248,7 +249,7 @@ background-size: 100% 100%;
   margin-left: 17%;
   width: 30%;
   min-width: 360px;
-  height: 100%;
+ 
   float: right;
   background-color: rgb(48, 47, 47);
   border-radius: 5px;
@@ -418,5 +419,127 @@ font-size: 25px;
 margin-top: -10px;
 margin-top: 4%;
 align-self: center;
+
+}
+.footer{
+  display: flex;
+
+  justify-content: center;
+  background-color: rgb(54, 54, 54);
+}
+.footerBox{
+  height:80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footerText{
+
+align-self: center;
+
+}
+
+
+@media (max-width: 1365px){
+
+
+  .bitcoinCardImage{
+display: none;
+   
+   }
+
+   .bitcoinCard{
+ width: 100%;
+
+
+   }
+   .filterBox{
+    width: 100%;
+ 
+ 
+  }
+
+  .cardCryptos{
+    
+  }
+ .headerTittle{
+   
+  width: 80%;
+  padding: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+  text-align: center;
+  font-size: 30px;
+ display: flex;
+  height: 23%;
+ color: black;
+}
+.tittle{
+  font-size: 40px;
+}
+ .headerGraph{
+ margin-left: 5%;
+ 
+ width: 90%;
+ }
+ 
+ .imageMap{
+  margin-top: 5%;
+  align-self: center;
+  margin-left: 3%;
+  width: 10%;
+  float: left;
+}
+.boxMap{
+  margin-top: 25%;
+  display: block;
+}
+
+.mapBoxTittle{
+  
+  align-self: center;
+  width: 30%;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-size: 20px;
+  text-align: left;
+  float: left;
+
+}
+.mapBoxPrice{
+  align-self: center;
+  float: left;
+  height: 5%;
+  width: 25%;
+  margin-top: 5%;
+  margin-left: 3%;
+  font-size: 20px;
+  text-align: right;
+
+}
+.mapBoxChange{
+  align-self: center;
+  float: left;
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 10%;
+  padding-top: 12px;
+  font-size: 16px;
+  
+}
+.mapGraph{
+ 
+  float: left;
+  width: 100%;
+  min-width: 360px;
+  float: right;
+  background-color: rgb(48, 47, 47);
+  border-radius: 5px;
+  position: relative;
+  
+  
+}
+
 
 }

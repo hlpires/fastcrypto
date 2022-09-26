@@ -148,7 +148,7 @@ useEffect(() => {
                               <div className = 'subTittle'><p className = 'subTittletextBanner'>Graficos em tempo real para a analise de dados de investidores</p></div>
                               </div>
                               <div className = 'imageBanner'>
-                                  <div className = 'imageBannerSize'><Image src = {banner} width={600} height={500}></Image></div>
+                                  <div className = 'imageBannerSize'><Image src = {banner} width={700} height={600}></Image></div>
                               </div>
                           </div>
                         </div>
@@ -174,7 +174,7 @@ useEffect(() => {
                                         <Line
                                             data={data}
                                             width={400}
-                                            height={170}
+                                            height={160}
                                         />
                                     </div>
                                 </div>
