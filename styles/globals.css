@@ -89,6 +89,7 @@ position: absolute;
 
 }
 
+
 .bitcoinCard{
   height: 100%;
   width: 70%;
@@ -167,7 +168,7 @@ background-size: 100% 100%;
 }
 
 .filterBox{
-  width: 50%;
+  width: 58.5%;
  margin-top: 2%;
   height: 50px;
   color: black;
@@ -442,9 +443,16 @@ align-self: center;
 }
 
 
-@media (max-width: 1365px){
+@media (max-width: 665px){
 
 
+
+  .tittleHolder{
+    display: none;
+  }
+  .position{
+    width: 100vw;
+  }
   .bitcoinCardImage{
 display: none;
    
@@ -496,6 +504,7 @@ display: none;
 .boxMap{
   margin-top: 25%;
   display: block;
+  width: 100%;
 }
 
 .mapBoxTittle{
@@ -543,5 +552,16 @@ display: none;
   
 }
 
+.tittleTextBanner{
+
+  font-size: 35px;
+
+  }
+
+  .subTittletextBanner{
+    
+    font-size: 24px;
+ 
+  }
 
 }
