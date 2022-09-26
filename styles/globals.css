@@ -82,11 +82,13 @@ position: absolute;
 }
 
 .bitcoinCardImage{
- height: 100%;
-  width:60%;
+  height: 100%;
+  margin-left: 10%;
+  width:30%;
 
 
 }
+
 .bitcoinCard{
   height: 100%;
   width: 70%;
@@ -148,12 +150,12 @@ position: absolute;
 }
 .bitcoinArt{
   filter: drop-shadow(6px 4px 10px rgb(15, 15, 15));
-  width: 100%;
+  width: 80%;
   margin-top: 5%;
-  height: 95%;
- 
+  
+
   transform: translate3d(0px, -16px, 0px);
-  transition: 1.5s;
+  transition: 2.5s;
 }
 .bannerArtFooter{
   width: 100%;

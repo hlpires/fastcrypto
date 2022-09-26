@@ -72,14 +72,14 @@ const Cryptos = () => {
 useEffect(() => {
 
     const interval = setInterval(() => {
-        if (animate === 'translate3d(0px, 0px, 0px)') {
+        if (animate === 'translate3d(0px, 120px, 0px)') {
             setAnimate('translate3d(0px, 16px, 0px)')
             setAnimateShadow('drop-shadow(6px 4px 5px rgb(15, 15, 15))')
             
 
         } else {
-            setAnimate('translate3d(0px, 0px, 0px)')
-            setAnimateShadow('drop-shadow(2px 4px 10px rgb(109, 188, 188))')
+            setAnimate('translate3d(0px, 120px, 0px)')
+            setAnimateShadow('drop-shadow(2px 4px 10px rgb(255,215,0))')
         }
     }, 1700)
 
@@ -179,7 +179,7 @@ useEffect(() => {
                                     </div>
                                 </div>
                                 <div className='bitcoinCardImage'>
-                                    <div className='bitcoinArt' style={bitcoinArtStyle} ><Image height={560} width={620} src={imageCrypto}></Image></div>
+                                    <div className='bitcoinArt' style={bitcoinArtStyle} ><Image height={420} width={460} src={imageCrypto}></Image></div>
                                 </div>
                             </div>
                          </div>
