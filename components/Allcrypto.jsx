@@ -42,7 +42,7 @@ const Allcrypto = () => {
     }, []);
 
     useEffect(() => {
-        
+
         if (dataCrypto)
             setCoins(dataCrypto.data.coins)
     }, [dataCrypto]);
@@ -53,13 +53,14 @@ const Allcrypto = () => {
     }
 
     const stylebutton = {
-        display:display
+        display: display
     }
 
     useEffect(() => {
         if (typeof coins !== 'undefined')
             setCoinsF(coins)
     }, [coins]);
+//modificar objeto e adicionar parametro em cada um
 
     const filter = (v) => {
         if (v)
@@ -68,7 +69,7 @@ const Allcrypto = () => {
             setCoinsF(coins.filter(({ name }) => name.toLowerCase().startsWith(v)).splice(0, 10))
 
     }
- console.log(coins)
+    console.log(coins)
 
     if (typeof coins !== 'undefined' && typeof coinsF !== 'undefined')
 
@@ -87,7 +88,7 @@ const Allcrypto = () => {
                         </div>
                         {coinsF.map(({ iconUrl, name, change, price, sparkline }) => (
 
-                            <div className='boxMap'key = {price}>
+                            <a href="slug"> <div className='boxMap' key={price}>
                                 <div className='imageMap' >
                                     <Image loader={() => iconUrl} width={100} height={100} src={iconUrl}></Image>
                                 </div>
@@ -101,13 +102,8 @@ const Allcrypto = () => {
                                         labels: ['-24', '-22', '-20', '-18', '-16', '-12', '-10', '-8', '-4', '-2', 'agora'],
                                         datasets: [
                                             {
-                                                plugins: {
-                                                    legend: {
-                                                        display: 'false'
-                                                    }
-                                                },
-                                                label:'24HRSs',
-                                                data: [...sparkline.slice(0, 1),...sparkline.slice(1, 10),...sparkline.slice(1, 15),...sparkline.slice(1, 25),price],
+                                                label: '24HRSs',
+                                                data: [...sparkline.slice(0, 1), ...sparkline.slice(1, 10), ...sparkline.slice(1, 15), ...sparkline.slice(1, 25), price],
                                                 elements: {
                                                     line: {
                                                         tension: 0,
@@ -115,7 +111,8 @@ const Allcrypto = () => {
                                                         borderWidth: 2,
                                                         color: 'black',
                                                         borderColor: 'rgba(58, 226, 51)',
-                                                        backgroundColor: 'rgba(28, 166, 91)'
+                                                        backgroundColor: 'rgba(28, 166, 91)',
+                                                        lineTension: 0.3
                                                     },
                                                     point: {
 
@@ -124,27 +121,25 @@ const Allcrypto = () => {
                                                     }
                                                 },
                                                 responsive: true,
-                                                scales: {
-                                                    xAxis: {
-                                                        display: false
-                                                    },
-                                                    yAxis: {
-                                                        display: false
-                                                    }
-                                                }
+
                                             }
                                         ]
                                     }
-                                } width={400} height={140} /></div>
+                                } options={{
+                                    plugins: {
+                                        legend: false
+                                    },
+                                }} width={500} height={180} /></div>
 
 
-                            </div>))}
-                            
-                    <div className =  'addMore'>
-                       {/* } <div style ={stylebutton} className = 'addMoreButton' onClick = { () => loadmore()}>
+                            </div></a>)
+                        )}
+
+                        <div className='addMore'>
+                            {/* } <div style ={stylebutton} className = 'addMoreButton' onClick = { () => loadmore()}>
                             <p className ='buttonText'> Carregar todas</p>
                             </div> */}
-                    </div>
+                        </div>
 
                     </div>
 

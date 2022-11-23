@@ -7,7 +7,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     scroll-behavior: smooth;
-    background-color: #171717;
+    background-color: #2d2c2e;
     color: white;
 }
 
@@ -87,8 +87,8 @@ position: absolute;
 
 .bitcoinCardImage{
   height: 100%;
-  margin-left: 10%;
-  width:30%;
+  margin-left: 0%;
+  width:40%;
 
 
 }
@@ -157,8 +157,6 @@ position: absolute;
   filter: drop-shadow(6px 4px 10px rgb(15, 15, 15));
   width: 80%;
   margin-top: 5%;
-  
-
   transform: translate3d(0px, -16px, 0px);
   transition: 2.5s;
 }
@@ -202,6 +200,7 @@ background-size: 100% 100%;
   background-color: #202020;
 
 }
+
 .allCryptoHolder{
  
   background-color: #202020;
@@ -210,15 +209,17 @@ background-size: 100% 100%;
 }
 
 .boxMap{
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(97, 69, 190);
   margin-bottom: 2%;
   margin-left: 0%;
-  width: 100%;
-  height: 180px;
- 
-  
   border: 1px solid rgb(73, 73, 73);
   display: flex;
+  transition: 1s;
+  
+  
+}
+.boxMap:hover{
+  transform: scale(1.05);
 }
 .imageMap{
   align-self: center;
@@ -256,9 +257,8 @@ background-size: 100% 100%;
   margin-left: 17%;
   width: 30%;
   min-width: 360px;
- 
   float: right;
-  background-color: rgb(48, 47, 47);
+  background-color: rgba(48, 47, 47,0.6);
   border-radius: 5px;
   position: relative;
 
@@ -445,7 +445,25 @@ align-self: center;
 align-self: center;
 
 }
-
+.slug{
+  justify-content: center;
+  display: flex;
+}
+.slugBox{
+  margin-top: 10%;
+  border:1px solid red;
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+.slugGraph{
+  width: 50%;
+  height: 100%;
+  border: 2px solid blue;
+}
+.spacer{
+  height: 1000px;
+}
 
 @media (max-width: 900px){
 
@@ -596,5 +614,7 @@ margin-left: 5%;
     font-size: 24px;
  
   }
+
+
 
 }

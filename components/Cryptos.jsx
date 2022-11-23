@@ -175,6 +175,7 @@ useEffect(() => {
                                             data={data}
                                             width={400}
                                             height={160}
+                                    
                                         />
                                     </div>
                                 </div>
