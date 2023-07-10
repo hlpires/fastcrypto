@@ -23,7 +23,8 @@ interface dataCrypto {
         [key: string]: string;
     };
 }
-const FixedMyReactComponent: any = Line
+const FixedMyReactComponent: any = Line;
+
 const Allcrypto = () => {
 
     const [label, setlabel] = useState<any>([])
