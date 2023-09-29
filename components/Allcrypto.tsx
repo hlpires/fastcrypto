@@ -127,8 +127,12 @@ const Allcrypto = () => {
                                         <Image loader={() => iconUrl} width={100} height={100} src={iconUrl}></Image>
                                     </div>
                                     <p className='mapBoxTittle'>{name}</p>
-                                    <p className='mapBoxPrice'>{Number(price).toFixed(2) + ' $'}</p>
-                                    <p className='mapBoxChange'><span style={mystyle} className='spanTittleMap'>{change + '%'}</span></p>
+                                    <p className='mapBoxPrice' style={{ color: 'green', filter: 'brightness(2)', marginTop: '38px', fontWeight: 'bold' }}>{Number(price).toFixed(2) + ' $'}</p>
+                                    <p className='mapBoxChange'>
+                                        <span style={{ ...mystyle, color: change < 0 ? 'red' : 'green', fontWeight: "bold", filter: 'brightness(2)' }} className='spanTittleMap'>
+                                            {change + '%'}
+                                        </span>
+                                    </p>
 
                                     <div className='mapGraph'>
                                         <FixedMyReactComponent data={

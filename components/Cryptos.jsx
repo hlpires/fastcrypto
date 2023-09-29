@@ -3,7 +3,7 @@ import imageCrypto from '../img/crypto.png'
 import Image from 'next/image'
 import { Line } from 'react-chartjs-2';
 import banner from '../img/banner.png'
-import Chart from 'chart.js/auto';
+import Chart, { Legend } from 'chart.js/auto';
 import bannerFooterImg from '../img/banner-curve-dark.png'
 
 const Cryptos = () => {
@@ -39,12 +39,12 @@ const Cryptos = () => {
             const res = await fetch('/api/connect')
             if (!res.ok) {
                 // This will activate the closest `error.js` Error Boundary
-                throw new Error('Failed to fetch data')
-              }
+                console.log("erro")
+            }
         }
 
         testserver()
-        
+
         const options = {
             method: 'GET',
             url: 'https://coinranking1.p.rapidapi.com/coins',
@@ -120,7 +120,8 @@ const Cryptos = () => {
                         borderWidth: 2,
                         color: 'black',
                         borderColor: 'rgba(58, 226, 51)',
-                        backgroundColor: 'rgba(28, 166, 91)'
+                        backgroundColor: 'rgba(28, 166, 91)',
+                        lineTension: 0.3
                     },
                     point: {
                         color: 'black',
@@ -174,7 +175,10 @@ const Cryptos = () => {
                         <div className='cardCryptos'>
                             <div className='bitcoinCard'>
                                 <div className='headerTittle'>
-                                    <div className='bitcoinImage'><Image loader={() => dataCrypto.data.coins[0].iconUrl} width={100} height={100} src={dataCrypto.data.coins[0].iconUrl}></Image></div>
+                                    <div className='bitcoinImage'>
+                                        <Image loader={() => dataCrypto.data.coins[0].iconUrl} width={70} height={70} src={dataCrypto.data.coins[0].iconUrl}>
+                                        </Image>
+                                    </div>
                                     <p className='tittle'>{bitcoinNome + '\t'}
                                         <span className='spanTittle'>{bitcoinPrice + '$ '}</span>
                                         <span style={myStyle} className='spanTittle'>{bitcoinChange + '%'}</span>
@@ -182,12 +186,16 @@ const Cryptos = () => {
                                     </p>
                                 </div>
 
-                                <div className='headerGraph'>
+                                <div className='headerGraph' >
                                     <Line
                                         data={data}
                                         width={400}
                                         height={160}
-
+                                        options={{
+                                            plugins: {
+                                                legend: false
+                                            },
+                                        }}
                                     />
                                 </div>
                             </div>

@@ -1,14 +1,15 @@
 html {
   color-scheme: dark;
 }
+
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    scroll-behavior: smooth;
-    background-color: #2d2c2e;
-    color: white;
+  scroll-behavior: smooth;
+  background-color: #2d2c2e;
+  color: white;
 }
 
 a {
@@ -24,16 +25,17 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
-   
+
     background-color: #171717;
- 
+
   }
 }
 
 
-.crypto{
+.crypto {
   justify-content: center;
   display: flex;
   background: #7158e3;
@@ -41,33 +43,35 @@ a {
 }
 
 
-.position{
+.position {
   max-width: 2000px;
   width: 90vw;
   display: flex;
 }
 
-.cardCryptos{
+.cardCryptos {
 
 
   width: 100%;
   background-color: #202020;
- display: flex;
- margin-bottom: 0%;
+  display: flex;
+  margin-bottom: 0%;
 
 
 }
-.bubbleBox{
-max-width: 1500px;
-margin: 0;
-max-height: 640px;
-height: 65%;
-width: 90%;
+
+.bubbleBox {
+  max-width: 1500px;
+  margin: 0;
+  max-height: 640px;
+  height: 65%;
+  width: 90%;
 
 
-position: absolute;
+  position: absolute;
 }
-.bubble{
+
+.bubble {
   top: -6%;
   width: 50%;
   height: 94%;
@@ -75,7 +79,8 @@ position: absolute;
   border-radius: 50%;
   position: absolute;
 }
-.bubble2{
+
+.bubble2 {
   top: 6%;
   left: 40%;
   width: 50%;
@@ -85,227 +90,247 @@ position: absolute;
   position: absolute;
 }
 
-.bitcoinCardImage{
+.bitcoinCardImage {
   height: 100%;
   margin-left: 0%;
-  width:40%;
+  width: 40%;
 
 
 }
 
 
-.bitcoinCard{
+.bitcoinCard {
   height: 100%;
   width: 70%;
 
 }
-.headerTittle{
+
+.headerTittle {
 
   width: 80%;
-  
+
   text-align: center;
   font-size: 30px;
- display: flex;
+  display: flex;
   height: 23%;
- color: white;
+  color: white;
 }
-.headerGraph{
-  padding-top: 8%;
-  padding-left: 2%;
-  
- width: 93%;
- position: relative;
- box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
- border-radius: 5px;
- padding-right: 7%;
- background-color: rgb(48, 47, 47);
+
+.headerGraph {
+  padding-top: 2%;
+  padding-left: 1%;
+  padding-bottom: 1%;
+  width: 93%;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 5px;
+  padding-right: 1%;
+  background-color: rgb(48, 47, 47);
 }
 
 
-.tittle{
- margin-left: 2%;
- width: 100%;
- text-align: left;
- 
- align-self: center;
+.tittle {
+  margin-left: 2%;
+  width: 100%;
+  text-align: left;
+
+  align-self: center;
   font-size: 60px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bolder;
 }
-.spanTittle{
+
+.spanTittle {
   font-size: 35px;
   color: green;
   margin-left: 0%;
- 
+
 }
 
-.cryptoBox{
+.cryptoBox {
   width: 100%;
 
 }
-.bitcoinImage{
+
+.bitcoinImage {
   padding-top: 2%;
   align-self: center;
 
 }
-.hora{
+
+.hora {
   display: none;
   font-size: 18px;
   color: white;
 }
-.bitcoinArt{
+
+.bitcoinArt {
   filter: drop-shadow(6px 4px 10px rgb(15, 15, 15));
   width: 80%;
   margin-top: 5%;
   transform: translate3d(0px, -16px, 0px);
   transition: 2.5s;
 }
-.bannerArtFooter{
+
+.bannerArtFooter {
   width: 100%;
   margin-top: -300px;
-height: 400px;
+  height: 400px;
 
-background-image: url(../img/banner-curve-dark.png);
-background-size: 100% 100%;
+  background-image: url(../img/banner-curve-dark.png);
+  background-size: 100% 100%;
 }
 
-.filterBox{
+.filterBox {
   width: 58.5%;
- margin-top: 2%;
+  margin-top: 2%;
   height: 50px;
   color: black;
   display: flex;
   margin-bottom: 2%;
 }
-.buscar{
+
+.buscar {
   width: 10%;
   height: 50px;
   color: white;
 
-  background-image:url(../img/busca.png);
+  background-image: url(../img/busca.png);
   background-size: 80% 100%;
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
 
-.input{
+.input {
   width: 100%;
   height: 100%;
   font-size: 20px;
 }
-.allCrypto{
+
+.allCrypto {
   min-height: 800px;
   width: 100%;
   background-color: #202020;
 
 }
 
-.allCryptoHolder{
- 
+.allCryptoHolder {
+
   background-color: #202020;
   display: flex;
   justify-content: center;
 }
 
-.boxMap{
+.boxMap {
   background-color: rgb(97, 69, 190);
+  filter: brightness(0.9);
   margin-bottom: 2%;
   margin-left: 0%;
   border: 1px solid rgb(73, 73, 73);
   display: flex;
   transition: 1s;
-  
-  
+
+
 }
-.boxMap:hover{
+
+.boxMap:hover {
   transform: scale(1.05);
 }
-.imageMap{
+
+.imageMap {
   align-self: center;
   margin-left: 3%;
   width: 10%;
- 
+
 }
 
-.mapBoxTittle{
+.mapBoxTittle {
   align-self: center;
   width: 10%;
   margin-left: 0%;
   font-size: 25px;
   text-align: left;
-  
+
 }
-.mapBoxPrice{
+
+.mapBoxPrice {
   align-self: center;
   height: 20%;
   width: 15%;
   margin-left: 5%;
   font-size: 30px;
   text-align: right;
-  
+
 }
-.mapBoxChange{
+
+.mapBoxChange {
   align-self: center;
   margin-left: 0.5%;
   width: 10%;
   padding-top: 17px;
   font-size: 16px;
 }
-.mapGraph{
-  
+
+.mapGraph {
+
   margin-left: 17%;
   width: 30%;
   min-width: 360px;
   float: right;
-  background-color: rgba(48, 47, 47,0.6);
+  background-color: rgba(48, 47, 47, 0.6);
   border-radius: 5px;
   position: relative;
 
 }
 
-.tittleHolder{
+.tittleHolder {
   width: 100%;
   height: 50px;
 
   display: flex;
 }
-.holder1{
- 
+
+.holder1 {
+
   width: 32%;
   height: 100%;
 }
-.holder2{
+
+.holder2 {
 
   width: 38%;
-   height: 100%;
+  height: 100%;
 }
 
-.holder3{
-  
+.holder3 {
+
   width: 30%;
   height: 100%;
 }
-.tittleText{
-padding-top: 5px;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-color:rgb(184, 184, 184);
+
+.tittleText {
+  padding-top: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(184, 184, 184);
 }
-.header{
+
+.header {
   display: flex;
   justify-content: center;
   background: #7158e3;
 }
-.headerBox{
+
+.headerBox {
   width: 100%;
- 
+
   height: 80%;
 
   display: flex;
- 
+
 }
 
-.logo{
+.logo {
   margin-left: 2%;
   width: 6%;
   float: left;
@@ -315,20 +340,23 @@ color:rgb(184, 184, 184);
   background-repeat: no-repeat;
 
 }
-.logoTittle{
+
+.logoTittle {
   width: 40%;
   height: 100%;
 
 }
-.logoTittleText{
-width: 100%;
-margin-top: 7%;
-font-size: 55px;
-font-weight: bolder;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.logoTittleText {
+  width: 100%;
+  margin-top: 7%;
+  font-size: 55px;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.button{
-  
+
+.button {
+
   width: 15%;
   margin-top: 0.5%;
   border-radius: 65px;
@@ -338,47 +366,54 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: rgb(252, 252, 252);
   cursor: pointer;
 }
-.logoButtonText{
+
+.logoButtonText {
   color: black;
   margin-top: 7%;
   font-size: 28px;
   font-weight: bolder;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.banner{
+
+.banner {
   height: 500px;
 
   display: flex;
 }
-.contentBox{
+
+.contentBox {
   display: block;
 
   width: 60%;
 }
 
-.tittleBox{
-width: 100%;
+.tittleBox {
+  width: 100%;
 
 
 
 }
-.tittleTextBanner{
 
-font-size: 55px;
-font-weight: BOLDER;
-margin-top: 0%;
+.tittleTextBanner {
+
+  font-size: 55px;
+  font-weight: BOLDER;
+  margin-top: 0%;
 }
-.subTittle{
+
+.subTittle {
   width: 100%;
 
   height: 40%;
 }
-.subTittletextBanner{
-  
+
+.subTittletextBanner {
+
   font-size: 34px;
   margin-top: 0%;
 }
-.imageBanner{
+
+.imageBanner {
   width: 40%;
   margin-top: -5%;
 
@@ -387,17 +422,18 @@ margin-top: 0%;
 
 }
 
-.imageBannerSize{
+.imageBannerSize {
 
   height: 100%;
 }
 
-.bitcoinBox{
+.bitcoinBox {
   display: flex;
   background-color: rgba(255, 255, 255, .04);
   justify-content: center;
 }
-.addMore{
+
+.addMore {
   width: 100%;
   height: 60px;
 
@@ -405,7 +441,8 @@ margin-top: 0%;
   justify-content: center;
   margin-bottom: 10%;
 }
-.addMoreButton{
+
+.addMoreButton {
   width: 30%;
   height: 100%;
   border: 2px solid white;
@@ -415,204 +452,226 @@ margin-top: 0%;
   cursor: pointer;
 }
 
-.addMoreButton:hover{
-color: black;
-background-color: white;
+.addMoreButton:hover {
+  color: black;
+  background-color: white;
 }
-.buttonText{
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-font-weight: bolder;
-font-size: 25px;
-margin-top: -10px;
-margin-top: 4%;
-align-self: center;
+
+.buttonText {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: -10px;
+  margin-top: 4%;
+  align-self: center;
 
 }
-.footer{
+
+.footer {
   display: flex;
 
   justify-content: center;
   background-color: rgb(54, 54, 54);
 }
-.footerBox{
-  height:80px;
+
+.footerBox {
+  height: 80px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.footerText{
 
-align-self: center;
+.footerText {
+
+  align-self: center;
 
 }
-.slug{
+
+.slug {
   justify-content: center;
   display: flex;
 }
-.slugBox{
+
+.slugBox {
   margin-top: 10%;
-  border:1px solid red;
+  border: 1px solid red;
   width: 100%;
   height: 500px;
   display: flex;
 }
-.slugGraph{
+
+.slugGraph {
   width: 50%;
   height: 100%;
   border: 2px solid blue;
 }
-.spacer{
+
+.spacer {
   height: 1000px;
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
 
   body {
     color: white !important;
   }
 
-  .tittleHolder{
+  .tittleHolder {
     display: none;
   }
-  .position{
+
+  .position {
     width: 100vw;
   }
-  .bitcoinCardImage{
-display: none;
-   
-   }
 
-   .bitcoinCard{
- width: 100%;
+  .bitcoinCardImage {
+    display: none;
+
+  }
+
+  .bitcoinCard {
+    width: 100%;
 
 
-   }
-   .bubbleBox{
-     display: none;
-   }
+  }
 
-   .logoTittle{
-     width: 90%;
-     margin-left: 5%;
-   }
-   .contentBox{
-width: 90%;
-margin-left: 5%;
-   }
-   .imageBanner{
-     display: none;
-   }
-   .buscar{
-     display: none;
-   }
-   .filterBox{
+  .bubbleBox {
+    display: none;
+  }
+
+  .logoTittle {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .contentBox {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .imageBanner {
+    display: none;
+  }
+
+  .buscar {
+    display: none;
+  }
+
+  .filterBox {
     width: 90%;
     margin-top: 5%;
     margin-left: 5%;
- 
+
   }
-  .bannerArtFooter{
-  display: none;
+
+  .bannerArtFooter {
+    display: none;
     margin-top: -500px;
 
   }
- 
- 
-  .cardCryptos{
+
+
+  .cardCryptos {
     display: none;
   }
- .headerTittle{
-   
-  width: 80%;
-  padding: 5%;
-  margin-top: 2%;
-  margin-bottom: 2%;
 
-  text-align: center;
-  font-size: 30px;
- display: flex;
-  height: 23%;
- color: black;
-}
-.tittle{
-  font-size: 40px;
-}
- .headerGraph{
- margin-left: 5%;
- 
- width: 90%;
- }
- 
- .imageMap{
-  margin-top: 2%;
-  align-self: center;
-  margin-left: 3%;
-  width: 8%;
-  float: left;
-}
-.boxMap{
-  margin-top: 25%;
-  display: block;
-  width: 100%;
-}
+  .headerTittle {
 
-.mapBoxTittle{
-  
-  align-self: center;
-  width: 30%;
-  margin-top: 2%;
-  margin-left: 5%;
-  font-size: 20px;
-  text-align: left;
-  float: left;
+    width: 80%;
+    padding: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 
-}
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    height: 23%;
+    color: black;
+  }
 
-.mapBoxPrice{
-  align-self: center;
-  float: left;
-  height: 5%;
-  width: 25%;
-  margin-top: 2%;
-  margin-left: 3%;
-  font-size: 20px;
-  text-align: right;
+  .tittle {
+    font-size: 40px;
+  }
 
-}
-.mapBoxChange{
-  align-self: center;
-  float: left;
-  margin-top: 2%;
-  margin-left: 5%;
-  width: 10%;
-  height: 5%;
-  padding-top: 12px;
-  font-size: 16px;
-  display: none;
-}
-.mapGraph{
- 
-  float: left;
-  width: 100%;
-  min-width: 360px;
-  float: right;
-  background-color: rgb(48, 47, 47);
-  border-radius: 5px;
-  position: relative;
-  
-  
-}
+  .headerGraph {
+    margin-left: 5%;
 
-.tittleTextBanner{
+    width: 90%;
+  }
 
-  font-size: 35px;
+  .imageMap {
+    margin-top: 2%;
+    align-self: center;
+    margin-left: 3%;
+    width: 8%;
+    float: left;
+  }
+
+  .boxMap {
+    margin-top: 25%;
+    display: block;
+    width: 100%;
+  }
+
+  .mapBoxTittle {
+
+    align-self: center;
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 20px;
+    text-align: left;
+    float: left;
 
   }
 
-  .subTittletextBanner{
-    
+  .mapBoxPrice {
+    align-self: center;
+    float: left;
+    height: 5%;
+    width: 25%;
+    margin-top: 2%;
+    margin-left: 3%;
+    font-size: 20px;
+    text-align: right;
+
+  }
+
+  .mapBoxChange {
+    align-self: center;
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 10%;
+    height: 5%;
+    padding-top: 12px;
+    font-size: 16px;
+    display: none;
+  }
+
+  .mapGraph {
+
+    float: left;
+    width: 100%;
+    min-width: 360px;
+    float: right;
+    background-color: rgb(48, 47, 47);
+    border-radius: 5px;
+    position: relative;
+
+
+  }
+
+  .tittleTextBanner {
+
+    font-size: 35px;
+
+  }
+
+  .subTittletextBanner {
+
     font-size: 24px;
- 
+
   }
 
 
