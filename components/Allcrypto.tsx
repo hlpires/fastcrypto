@@ -130,7 +130,7 @@ const Allcrypto = () => {
                                     <p className='mapBoxPrice' style={{ color: 'green', filter: 'brightness(2)', marginTop: '38px', fontWeight: 'bold' }}>{Number(price).toFixed(2) + ' $'}</p>
                                     <p className='mapBoxChange'>
                                         <span style={{ ...mystyle, color: change < 0 ? 'red' : 'green', fontWeight: "bold", filter: 'brightness(2)' }} className='spanTittleMap'>
-                                            {change + '%'}
+                                            {change > 0 ? "+" + change + '%' : change}
                                         </span>
                                     </p>
 

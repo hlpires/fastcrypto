@@ -20,7 +20,7 @@ const Cryptos = () => {
     const [animateShadow, setAnimateShadow] = useState()
 
     const myStyle = {
-        color: 'red',
+        color: bitcoinPrice > 0 ? "green" : "red",
         fontSize: '20px',
         marginLeft: '0%',
     }
@@ -112,7 +112,7 @@ const Cryptos = () => {
                     }
                 },
                 label: '',
-                data: [...label.slice(0, 1), ...label.slice(1, 10), ...label.slice(1, 15), ...label.slice(1, 25), bitcoinPrice],
+                data: [...label.slice(0, 1), ...label.slice(1, 10), ...label.slice(1, 15), ...label.slice(1, 23), bitcoinPrice],
                 elements: {
                     line: {
                         tension: 0,
@@ -180,8 +180,8 @@ const Cryptos = () => {
                                         </Image>
                                     </div>
                                     <p className='tittle'>{bitcoinNome + '\t'}
-                                        <span className='spanTittle'>{bitcoinPrice + '$ '}</span>
-                                        <span style={myStyle} className='spanTittle'>{bitcoinChange + '%'}</span>
+                                        <span className='spanTittle' >{bitcoinPrice + '$ '}</span>
+                                        <span style={myStyle} className='spanTittle'>{bitcoinChange > 0 ? "+" + bitcoinChange : "-" + bitcoinChange + '%'}</span>
                                         <span className='hora'>{' 24hr'}</span>
                                     </p>
                                 </div>

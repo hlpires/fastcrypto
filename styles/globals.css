@@ -191,10 +191,10 @@ a {
 }
 
 .buscar {
-  width: 10%;
-  height: 50px;
+  margin-top: 10px;
+  width: 50px;
+  height: 30px;
   color: white;
-
   background-image: url(../img/busca.png);
   background-size: 80% 100%;
   background-repeat: no-repeat;
